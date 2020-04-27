@@ -1,0 +1,105 @@
+/* COLORS
+background blueish: #50e3c2
+container whiteish: #f7f7f7
+font: #b6b6b6 or #b8b8b8
+purple highlight: #df69e8
+*/
+body{
+  background-color:   #f4f4d7;
+  font-family: 'Oxanium', cursive;
+  font-size: 18px;
+  color: #001F3F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button, input{
+  font-family: 'Oxanium', cursive;
+  font-size: 18px;
+  padding:0px;
+  margin: 0px;
+  height:1;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding:1em;
+  padding-left:2em;
+  padding-right: 2em;
+  margin:auto;
+  background-color: #39CCCC;
+}
+
+h1{
+  color:#001F3F;
+  font-weight: 600;
+  font-size: 2.5em;
+  align-self: center;
+  text-shadow: 1px 1px 3px #269393;
+}
+
+.inputSection{
+  border:1px solid #3983cc;
+  border-radius: 3px;
+  display: flex;
+}
+#inputField, #addButton{
+  height: 1;
+  margin:0px;
+  border-radius: 0px;
+  border:none;
+  padding:0.5em;
+}
+
+#addButton{
+  color:white; 
+  background: #cc39cc;
+}
+
+#inputField{
+  color: #888;
+  min-width: 300px;
+  flex-grow: 1;
+}
+
+#taskSection{
+  display: flex;
+  flex-direction: column;
+}
+
+.taskDiv{
+  padding:0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start ;
+  align-items: center;
+}
+
+.task{
+  flex-grow: 1;
+}
+
+img{  
+  height:1.6em;
+}
+
+.tickButton, .deleteButton{
+  border:none;
+  background: none;
+  height:1.6em;
+  margin:.2em
+}
+
+.checkedTask .tickImg{
+  border: 0px solid #cccc39;
+  border-radius: 20%;
+  background-color: #cccc39;
+}
+
+.checkedTask p{
+  opacity: 30%;
+}
