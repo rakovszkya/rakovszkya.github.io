@@ -1,6 +1,6 @@
 body{
     font-family: 'Merriweather', serif;
-    background-image: url("./pic/pattern.png");
+    background-image: url("./pictures/pattern.png");
     height: 100%;
     width: 100%;
     border:0px;
@@ -8,7 +8,7 @@ body{
     margin: 0px;
 }
 .bg-div{
-    background: radial-gradient(rgba(230,230,230,.5), rgba(160,160,160,1));
+    background: radial-gradient(rgba(230,230,230,.8), rgba(160,160,160,1));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,8 +30,8 @@ h1, h2{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 800px;
-    box-shadow: 2px 1px 5px #444;
+    max-width: 800px;
+    box-shadow: 2px 3px 7px #444;
 }
 
 .main-div{
@@ -39,8 +39,10 @@ h1, h2{
 }
 
 div.picture{
-    width: 720px;
+    max-width: 720px;
+    max-height: 720px;
     align-items: center;
+    display: flex;
 }
 
 img.arrow{
@@ -51,7 +53,7 @@ img.arrow{
 .arrow-div{
     flex-grow: 1;
     height: 100%;
-    background-color: white;
+    background-color: whitesmoke;
     display: flex;
 
 }
@@ -60,7 +62,8 @@ img.arrow{
 }
 
 img.photo{
-    width: 720px;
+    max-width: 720px;
+    max-height: 720px;
 }
 
 div.text{
@@ -83,5 +86,10 @@ footer{
     justify-content: space-evenly;
     position: fixed;
     bottom:0px;
-    background: #444;
+    background:#a0a0a0;
+    box-shadow: 0px 0px 5px #444;
+}
+
+footer, .invisible{
+    height: 3em;
 }
