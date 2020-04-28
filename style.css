@@ -1,10 +1,87 @@
 body{
     font-family: 'Merriweather', serif;
+    background-image: url("./pic/pattern.png");
+    height: 100%;
+    width: 100%;
+    border:0px;
+    padding:0px;
+    margin: 0px;
+}
+.bg-div{
+    background: radial-gradient(rgba(230,230,230,.5), rgba(160,160,160,1));
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    border:0px;
+    padding:0px;
+    margin: 0px;
+    position: fixed;    
 }
 
 h1, h2{
     font-family: 'Lora', serif;
+}
+
+.photoviewer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    box-shadow: 2px 1px 5px #444;
+}
+
+.main-div{
+    position: relative;
+}
+
+div.picture{
+    width: 720px;
+    align-items: center;
+}
+
+img.arrow{
+    padding: 10px;
+    justify-content: space-evenly;
+
+}
+.arrow-div{
+    flex-grow: 1;
+    height: 100%;
+    background-color: white;
+    display: flex;
+
+}
+.right{
+    transform: scale(-1);
+}
+
+img.photo{
+    width: 720px;
+}
+
+div.text{
+    position: absolute;
+    bottom: 0px;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding:1em;
+    max-height: 30%;
+    overflow: auto;
+}
+
+.text h1, .text p{
+    opacity: 1;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom:0px;
+    background: #444;
 }

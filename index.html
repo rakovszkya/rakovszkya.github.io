@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Photoviewer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <section class=+photoviewer>
-        <div class="left arrow"></div>
+    <div class="bg-div">
+    <section class="photoviewer">
+        <div class="arrow-div">            
+            <img class="left arrow" src="./pic/arrow.svg" alt="" srcset="">
+        </div>
         <div class="main-div">
-            <div class="picture"></div>
+            <div class="picture">
+                <img class='photo' src="./pic/DSC09963.JPG" alt="" srcset="">
+            </div>
             <div class="text">
-                <h1>Cím</h1>
-                <p>szöveg</p>
+                <h1>Moon</h1>
+                <p>By night, from starhill. You can change the design if you want, but the point is that it should be looking nice
+                    It should be in the middle of the screen, with fixed size.               The gallery’s content should be divided into two main parts: to the photo viewer and to the.</p>
             </div>
         </div>
-        <div class="right arrow"></div>
+        <div class="arrow-div">
+            <img class="right arrow" src="./pic/arrow.svg" alt="" srcset="">
+        </div>
     </section>
 
     <section class="navigation">
@@ -29,11 +37,12 @@
     </section>
 
     <footer>
-        <a href="/todo/index.html">TO DO app</a>
+        <p><a href="/todo/index.html">TO DO app</a></p>
         <p>2020</p>
         <p>Készítve Githubbal</p>
     </footer>
-    
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
