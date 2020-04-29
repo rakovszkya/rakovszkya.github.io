@@ -10,7 +10,7 @@ body{
     margin: 0px;
 }
 .bg-div{
-    background: radial-gradient(rgba(230,230,230,.8), rgba(160,160,160,1));
+    background: radial-gradient(ellipse at 50% 30% , rgba(256,256,256, .95), rgba(230,230,230,.8), rgb(192, 192, 192));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,30 +70,84 @@ img.photo{
 
 div.text{
     position: absolute;
+    width: 100%;
+    box-sizing: border-box;
     bottom: 0px;
-    color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.4);
+    color: #7FDBFF;
+    background-color: rgba(7, 7, 7, 0.5);
     padding:1em;
     max-height: 30%;
     overflow: auto;
+    transition: transform .4s ease-in-out 0.3s;
+    transform: scaleY(1); 
+    transform-origin: bottom;
 }
-
-div.text:hover{
-    transition: margin 0.5s ease-out;
+.main-div:hover .text{
+    transform: scaleY(0);
 }
 
 .text h1, .text p{
     opacity: 1;
 }
 
+section.navigation{
+    display: flex;
+}
+
+.thumb-pic{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: 3px solid grey;
+    margin: 5px;
+}
+
+.thumbnail-image{
+    object-position: center center; /* needs fix on centering and scaling...*/
+    object-fit: cover;
+    margin: auto;
+}
+
+.thumbnail-title{
+    position: absolute;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
     display: flex;
-    width: 100%;
+    max-width: 80%;
     justify-content: space-evenly;
     position: fixed;
     bottom:0px;
-    background:#a0a0a0;
+    background:#c0c0c0;
+    color: #001F3F;
     box-shadow: 0px 0px 5px #444;
+    border-radius: 20% 20% 0 0;
+}
+
+footer p{
+    margin-left: 3em;
+    margin-right: 3em;
+}
+footer a, footer a:visited{
+    color: #85144B;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #c81e71;
+    text-decoration: none;
 }
 
 footer, .invisible{
