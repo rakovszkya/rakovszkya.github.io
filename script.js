@@ -12,7 +12,7 @@ let Picture =[
         filename: "./pictures/resize/720-1.jpg",
         thumbfile: "./pictures/resize/128-1.jpg",
         title: "Glacier on Iceland",
-        text: "Dark grey tones, no life, not a welcoming place. Yes, this is Iceland. Ohh... wait!. There are some brave tourists risking their own health for the sake of this picture."
+        text: "Dark grey tones, no life, not a welcoming place. Yes, this is Iceland. Ohh... wait! There are some brave tourists risking their own health for the sake of this picture."
     },
     {
         id: 2,
@@ -69,6 +69,8 @@ let loadPhoto = (photoNumber) =>{
     if (photoNumber>=Picture.length) {
         photoNumber=0        
     }
+    
+    
 
     $('#photoview').attr('src', Picture[photoNumber].filename)
     $('#photo-title').text(Picture[photoNumber].title)
@@ -82,12 +84,11 @@ let choose = 0; //initialize starting photo
 loadPhoto(choose);
 
 // initialize thumbnail photographs
-Picture.forEach(i =>{
-    $('#navigation-section').append(`<div id="pic-${i.id}" class="thumb-pic">
-        <img id="thumbnail-${i.id}" class="thumbnail-image" src="${i.thumbfile}" >
-        <p class="thumbnail-title">${i.title}</p>
-    </div>`)
-    console.log(i.title);
+Picture.forEach(item =>{
+    $('#navigation-section').append(`<div id="pic-${item.id}" class="thumb-pic">
+        <p class="thumbnail-title">${item.title}</p>
+        <img id="thumbnail-${item.id}" class="thumbnail-image" src="${item.thumbfile}"  data-number="${item.id}">
+    </div>`)    
 })
 
 $(`#pic-${choose}`).toggleClass('selected')
@@ -114,3 +115,12 @@ document.onkeydown = function() {
             break;
     }
 }
+
+//event handling for click on thumbnail pictures
+$(".thumb-pic").click((event)=>{
+    console.log(event.target);
+    
+    choose=parseInt($(event.target).attr('data-number'));
+    loadPhoto(choose);
+})
+
